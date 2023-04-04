@@ -1,0 +1,100 @@
+/* blind */
+.blind {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+}
+
+/* ellipsis */
+.ellip {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ellip2 {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.thumb-box {
+    position: relative;
+    overflow: hidden;
+}
+.thumb-box::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    border: 1px solid #000;
+    opacity: 0.1;
+}
+
+/* hover event */
+a:hover .thumb-box img,
+a:focus .thumb-box img { transform: scale(1.05); }
+a:hover .title,
+a:focus .title { text-decoration: underline; }
+a .thumb-box img { transition: 0.3s;}
+.hover-link:hover, 
+.hover-link:focus{ text-decoration: underline; }
+
+.header .logo::after,
+.header .service-area .link-start::after,
+.header .service-area .link-junior::after,
+.header .service-area .link-junior:hover::after,
+.header .service-area .link-bin::after,
+.header .search-area .btn-keybord::after,
+.header .search-area .btn-set::after,
+.header .search-area .btn-submit::after, 
+.gnb .nav-item .mail::before,
+.gnb .nav-item .shop::after,
+.gnb .nav-item .shoplive::after,
+.gnb .nav-item .tv::before,
+.gnb .group-nav .btn-more::after,
+.gnb .group-weather .degree-box .max::before,
+.sc-news .group-issue .link-media::after,
+.sc-news .group-title .link-newsstand::before,
+.sc-news .group-title .link-newsstand::after, 
+.sc-news .group-title .set-area .ic-list::after,
+.sc-news .group-title .set-area .ic-thumb::after ,
+.sc-news .group-title .set-area .ic-set::after,
+.sc-theme .group-title .info-area .btn-set::before,
+.sc-theme .group-topstory .topstory-thumb .play::after,
+.sc-theme .group-category .btn,
+.sc-theme .group-theme .play::after,
+.sc-theme .group-theme .theme-title .title::after,
+.sc-login .link-login::before,
+.sc-login .sub-area .link-id::before,
+.sc-login .sub-area .link-join::before,
+.sc-sidenews .btn.prev::after,
+.sc-sidenews .btn.next::after,
+.sc-shopping .shop-control .btn.prev::after,
+.sc-shopping .shop-control .btn.next::after,
+.sc-shopping .btn-box .btn.prev::after,
+.sc-shopping .btn-box .btn.next::after,
+.footer .notice-area .link-all::after,
+.sc-theme .theme-more .icon-more {
+    background-image: url(../images/sp_bg.png.png);
+    background-size: 442px;
+    background-repeat: no-repeat;
+}
+
+.gnb .group-weather .current-box::before {
+    background-image: url(../images/sp_weather.png);
+    background-size: 215px;
+    background-repeat: no-repeat;
+}
+
+.sc-shopping .shop-title .title::before,
+.sc-shopping .shop-title .title::after,
+.sc-shopping .group-plusdeal .link-logo::before,
+.sc-shopping .deal-thumb .ico-one-plus::after,
+.sc-shopping .group-plusdeal .deal-thumb::after {
+    background-image: url(../images/sp_shop.png);
+    background-size: 129px;
+    background-repeat: no-repeat;
+}
