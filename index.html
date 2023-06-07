@@ -21,9 +21,9 @@
         <!-- HEADER -->
         <header class="header">
             <div class="header-inner">
-                <h1 class="logo-area"><a href="" class="logo"><span class="blind">네이버 로고</span></a></h1>
+                <h1 class="logo-area"><a href="" class="logo"><span class="blind">네이버</span></a></h1>
                 <div class="search-area">
-                    <form action="">
+                    <form action="" role="search">
                         <fieldset>
                             <legend class="blind">검색</legend>
                             <div class="wrap">
@@ -43,8 +43,10 @@
             </div>
             <!-- GNB -->
             <nav class="gnb">
+                <h2 class="blind">글로벌 네비게이션</h2>
                 <div class="gnb-inner">
                     <div class="group-nav">
+                        <h3 class="blind">바로가기 메뉴</h3>
                         <ul class="nav-list type-fix">
                             <li class="nav-item"><a href="" class="nav mail">메일</a></li>
                             <li class="nav-item"><a href="" class="nav">카페</a></li>
@@ -69,6 +71,7 @@
                     </div>
                     <!-- WEATHER -->
                     <div class="group-weather">
+                        <h3 class="blind">날씨</h3>
                         <a href="" class="link-weather">
                             <div class="current-box">
                                 <strong class="current">17.7°</strong>
@@ -90,12 +93,14 @@
             <!-- LEFT -->
             <div class="column-left">
                 <!-- AD1 -->
-                <aside class="ad1">
+                <aside class="ad1" role="banner">
+                    <!-- 수정 -->
+                    <h3 class="blind">살랑드파리 배너</h3>
                     <a href="" class="link-ad thumb-box"><img src="./images/ad1.jpg" alt="샬랑드파리 전제품 세일 12/15까지"></a>
                 </aside>
                 <!-- SC-NEWS -->
                 <section id="newsstand" class="sc-news">
-                    <h2 class="blind">뉴스영역</h2>
+                    <h2 class="blind">뉴스</h2>
                     <div class="group-issue">
                         <div class="issue-area">
                             <a href="" class="link-media ellip">연합뉴스</a>
@@ -110,18 +115,18 @@
                     </div>
                     <div class="group-title">
                         <a href="" class="link-newsstand">뉴스스탠드</a>
-                        <div role="tablist" class="sort-area">
-                            <a href="" role="tab" aria-selected="true" class="btn-sort">구독한 언론사</a>
-                            <a href="" role="tab" aria-selected="false" class="btn-sort">전체언론사</a>
+                        <div class="sort-area" role="tablist">
+                            <button id="tab1" class="btn-sort" role="tab" aria-selected="true" aria-controls="tab-panel1">구독한 언론사</button>
+                            <button class="btn-sort" role="tab" aria-selected="false">전체언론사</button>
                         </div>
-                        <div role="tablist" class="set-area">
-                            <a href="" role="tab" aria-selected="false" class="btn-set ic-list"><span class="blind">리스트형</span></a>
-                            <a href="" role="tab" aria-selected="true" class="btn-set ic-thumb"><span class="blind">썸네일형</span></a>
-                            <a href="" role="tab" aria-selected="false" class="btn-set ic-set"><span class="blind">설정</span></a>
+                        <div class="set-area">
+                            <button class="btn-set ic-list" aria-selected="false"><span class="blind">리스트형</span></button>
+                            <button class="btn-set ic-thumb" aria-selected="true"><span class="blind">썸네일형</span></button>
+                            <button class="btn-set ic-set" aria-selected="false"><span class="blind">설정</span></button>
                         </div>
                     </div>
                     <div class="group-media">
-                        <ul class="media-list">
+                        <ul id="tab-panel1" class="media-list" role="tabpanel" aria-labelledby="tab1">
                             <li class="media-item"><a href="" class="media"><img src="./images/news1.png" alt="해럴드경제"></a></li>
                             <li class="media-item"><a href="" class="media"><img src="./images/news2.png" alt="NEWSIS"></a></li>
                         </ul>
@@ -132,11 +137,12 @@
                 </section>
                 <!-- SC-THEME -->
                 <section id="theme" class="sc-theme">
-                    <h2 class="blind">주제별 분류 글</h2>
+                    <!-- 수정 -->
+                    <h2 class="blind">카테고리별 읽을만한 글</h2>   
                     <div class="theme-head">
                         <div class="group-title">
                             <div class="title-area">
-                                <h3 class="title">오늘 읽을만한 글</h3>
+                                <strong class="title">오늘 읽을만한 글</strong>
                                 <span class="desc">주제별로 분류된 다양한 글모음</span>
                             </div>
                             <div class="info-area">
@@ -510,7 +516,7 @@
             <div class="column-right">
                 <!-- SC-LOGIN -->
                 <section id="login" class="sc-login">
-                    <h2 class="blind">로그인 영역</h2>
+                    <h2 class="blind">로그인 및 회원가입</h2>
                     <p class="login-msg">네이버를 더 편리하게 이용하세요</p>
                     <a href="" class="link-login"><span class="blind">NAVER</span>로그인</a>
                     <div class="sub-area">
@@ -535,15 +541,15 @@
                 <section id="shopping" class="sc-shopping">
                     <div class="shop-title">
                         <h2 class="title"><a href="">트렌드 쇼핑</a></h2>
-                        <ul roloe="tab-list" class="tab-list">
+                        <ul class="tab-list" role="tab-list">
                             <li class="tab-item">
-                                <a href="" role="tab" class="tab" aria-selected="true">상품</a>
+                                <button role="tab" class="tab" aria-selected="true">상품</button>
                             </li>
                             <li class="tab-item">
-                                <a href="" role="tab" class="tab" aria-selected="false">쇼핑몰</a>
+                                <button role="tab" class="tab" aria-selected="false">쇼핑몰</button>
                             </li>
                             <li class="tab-item">
-                                <a href="" role="tab" class="tab" aria-selected="false">MEN</a>
+                                <button role="tab" class="tab" aria-selected="false">MEN</button>
                             </li>
                         </ul>
                     </div>
@@ -911,7 +917,9 @@
         <!-- FOOTER -->
         <footer class="footer">
             <div class="footer-inner">
+                <h2 class="blind">네이버 추가 정보</h2>
                 <div class="banner-area">
+                    <h3 class="blind">네이버 배너</h3>
                     <a href="" class="link-banner">
                         <div class="banner-thumb thumb-box">
                             <img src="./images/footer-banner1.png">
@@ -953,18 +961,20 @@
                     </a>
                 </div>
                 <div class="notice-area">
+                    <h3 class="blind">공지사항 및 서비스</h3>
                     <a href="" class="link-notice">공지사항</a>
                     <a href="" class="link-all">서비스 전체보기</a>
                 </div>
                 <div class="aside-area">
+                    <h3 class="blind">네이버 파트너</h3>  
                     <div class="partner-wrap">
                         <div class="partner-box">
-                            <h3 class="title">Creators</h3>
+                            <h4 class="title">Creators</h4>
                             <a href="" class="link-partner">크리에이터</a>
                             <a href="" class="link-partner">스몰비즈니스</a>
                         </div>
                         <div class="partner-box">
-                            <h3 class="title">Partners</h3>
+                            <h4 class="title">Partners</h4>
                             <a href="" class="link-partner">SME 풀케어 시스템</a>
                             <a href="" class="link-partner">비즈니스 · 광고</a>
                             <a href="" class="link-partner">스토어 개설</a>
@@ -972,7 +982,7 @@
                             <a href="" class="link-partner">엑스퍼트 등록</a>
                         </div>
                         <div class="partner-box">
-                            <h3 class="title">Developers</h3>
+                            <h4 class="title">Developers</h4>
                             <a href="" class="link-partner">네이버 개발자 센터</a>
                             <a href="" class="link-partner">오픈 API</a>
                             <a href="" class="link-partner">오픈소스</a>
@@ -1001,30 +1011,14 @@
                 <div class="crop-area">
                     <h3 class="blind">네이버 정책 및 약관</h3>
                     <ul class="crop-list">
-                        <li class="crop-item">
-                            <a href="">회사소개</a>
-                        </li>
-                        <li class="crop-item">
-                            <a href="">인재채용</a>
-                        </li>
-                        <li class="crop-item">
-                            <a href="">제휴제안</a>
-                        </li>
-                        <li class="crop-item">
-                            <a href="">이용약관</a>
-                        </li>
-                        <li class="crop-item">
-                            <a href="">개인정보처리방침</a>
-                        </li>
-                        <li class="crop-item">
-                            <a href="">청소년보호정책</a>
-                        </li>
-                        <li class="crop-item">
-                            <a href="">네이버 정책</a>
-                        </li>
-                        <li class="crop-item">
-                            <a href="">고객센터</a>
-                        </li>
+                        <li class="crop-item"><a href="">회사소개</a></li>
+                        <li class="crop-item"><a href="">인재채용</a></li>
+                        <li class="crop-item"><a href="">제휴제안</a></li>
+                        <li class="crop-item"><a href="">이용약관</a></li>
+                        <li class="crop-item"><a href="">개인정보처리방침</a></li>
+                        <li class="crop-item"><a href="">청소년보호정책</a></li>
+                        <li class="crop-item"><a href="">네이버 정책</a></li>
+                        <li class="crop-item"><a href="">고객센터</a></li>
                     </ul>
                     <address><a href="" class="link-addr">ⓒ NAVER Corp.</a></address>
                 </div>
